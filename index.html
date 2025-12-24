@@ -1,10 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube TTS Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+<div class="container">
+    <div class="header">
+        <h1>🎙️ YouTube TTS Generator</h1>
+        <p class="subtitle">Generate natural-sounding voiceovers for your videos</p>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <!-- Script Input -->
+            <div class="mb-4">
+                <label for="scriptInput" class="form-label">Your Script</label>
+                <textarea
+                        class="form-control"
+                        id="scriptInput"
+                        rows="8"
+                        placeholder="Paste your video script here..."></textarea>
+                <small class="text-muted">Character count: <span id="charCount">0</span></small>
+            </div>
+
+            <!-- Voice Selection -->
+            <div class="mb-4">
+                <label for="voiceSelect" class="form-label">Select Voice</label>
+                <select class="form-select" id="voiceSelect">
+                    <option value="en-US-Neural2-A">US Female (Neural2-A)</option>
+                    <option value="en-US-Neural2-C">US Female (Neural2-C)</option>
+                    <option value="en-US-Neural2-D">US Male (Neural2-D)</option>
+                    <option value="en-US-Neural2-F">US Female (Neural2-F)</option>
+                    <option value="en-US-Neural2-G">US Female (Neural2-G)</option>
+                    <option value="en-US-Neural2-H">US Female (Neural2-H)</option>
+                    <option value="en-US-Neural2-I">US Male (Neural2-I)</option>
+                    <option value="en-US-Neural2-J">US Male (Neural2-J)</option>
+                    <option value="en-GB-Neural2-A">UK Female (Neural2-A)</option>
+                    <option value="en-GB-Neural2-B">UK Male (Neural2-B)</option>
+                    <option value="en-GB-Neural2-C">UK Female (Neural2-C)</option>
+                    <option value="en-GB-Neural2-D">UK Male (Neural2-D)</option>
+                </select>
+            </div>
+
+            <!-- Speed Control -->
+            <div class="mb-4">
+                <label for="speedRange" class="form-label">Speech Speed: <span id="speedValue">1.0</span>x</label>
+                <input
+                        type="range"
+                        class="form-range"
+                        id="speedRange"
+                        min="0.5"
+                        max="2.0"
+                        step="0.1"
+                        value="1.0">
+            </div>
+
+            <!-- Generate Button -->
+            <button id="generateBtn" class="btn btn-primary btn-lg w-100">
+                Generate Audio
+            </button>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Generating your audio...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="alert alert-danger error-message" role="alert">
+                <strong>Error:</strong> <span id="errorText"></span>
+            </div>
+
+            <!-- Success Message with Download -->
+            <div id="successMessage" class="alert alert-success success-message" role="alert">
+                <strong>Success!</strong> Your audio is ready.
+                <button id="downloadBtn" class="btn btn-success btn-sm ms-3">
+                    Download Audio
+                </button>
+            </div>
+
+            <!-- Audio Preview -->
+            <div id="audioPreview" class="audio-preview">
+                <label class="form-label">Preview</label>
+                <audio id="audioPlayer" controls class="w-100"></audio>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>💡 Tip: Use clear punctuation for natural pauses in speech</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
