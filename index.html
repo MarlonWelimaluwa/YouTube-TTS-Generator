@@ -31,19 +31,49 @@
             <div class="mb-4">
                 <label for="voiceSelect" class="form-label">Select Voice</label>
                 <select class="form-select" id="voiceSelect">
-                    <option value="en-US-Neural2-A">US Female (Neural2-A)</option>
-                    <option value="en-US-Neural2-C">US Female (Neural2-C)</option>
-                    <option value="en-US-Neural2-D">US Male (Neural2-D)</option>
-                    <option value="en-US-Neural2-F">US Female (Neural2-F)</option>
-                    <option value="en-US-Neural2-G">US Female (Neural2-G)</option>
-                    <option value="en-US-Neural2-H">US Female (Neural2-H)</option>
-                    <option value="en-US-Neural2-I">US Male (Neural2-I)</option>
-                    <option value="en-US-Neural2-J">US Male (Neural2-J)</option>
-                    <option value="en-GB-Neural2-A">UK Female (Neural2-A)</option>
-                    <option value="en-GB-Neural2-B">UK Male (Neural2-B)</option>
-                    <option value="en-GB-Neural2-C">UK Female (Neural2-C)</option>
-                    <option value="en-GB-Neural2-D">UK Male (Neural2-D)</option>
+                    <!-- US English (Most Natural) -->
+                    <optgroup label="🇺🇸 US English - Male">
+                        <option value="en-US-Neural2-D">US Male - Deep & Authoritative (D) ⭐</option>
+                        <option value="en-US-Neural2-J">US Male - Professional & Clear (J) ⭐</option>
+                        <option value="en-US-Neural2-I">US Male - Friendly & Warm (I)</option>
+                        <option value="en-US-Neural2-A">US Male - Casual (A)</option>
+                    </optgroup>
+                    <optgroup label="🇺🇸 US English - Female">
+                        <option value="en-US-Neural2-F">US Female - Warm & Trustworthy (F) ⭐</option>
+                        <option value="en-US-Neural2-H">US Female - Professional (H) ⭐</option>
+                        <option value="en-US-Neural2-C">US Female - Clear & Friendly (C)</option>
+                        <option value="en-US-Neural2-E">US Female - Energetic (E)</option>
+                        <option value="en-US-Neural2-G">US Female - Soft (G)</option>
+                    </optgroup>
+
+                    <!-- UK English (British Accent - Premium Sound) -->
+                    <optgroup label="🇬🇧 UK English - Male">
+                        <option value="en-GB-Neural2-B">UK Male - Sophisticated (B)</option>
+                        <option value="en-GB-Neural2-D">UK Male - Authoritative (D)</option>
+                    </optgroup>
+                    <optgroup label="🇬🇧 UK English - Female">
+                        <option value="en-GB-Neural2-A">UK Female - Elegant (A)</option>
+                        <option value="en-GB-Neural2-C">UK Female - Professional (C)</option>
+                        <option value="en-GB-Neural2-F">UK Female - Warm (F)</option>
+                    </optgroup>
+
+                    <!-- Australian English (Friendly Vibe) -->
+                    <optgroup label="🇦🇺 Australian English">
+                        <option value="en-AU-Neural2-B">AU Male - Friendly (B)</option>
+                        <option value="en-AU-Neural2-C">AU Male - Casual (C)</option>
+                        <option value="en-AU-Neural2-D">AU Male - Professional (D)</option>
+                        <option value="en-AU-Neural2-A">AU Female - Clear (A)</option>
+                    </optgroup>
+
+                    <!-- Indian English (Clear & Professional) -->
+                    <optgroup label="🇮🇳 Indian English">
+                        <option value="en-IN-Neural2-B">IN Male - Professional (B)</option>
+                        <option value="en-IN-Neural2-C">IN Male - Clear (C)</option>
+                        <option value="en-IN-Neural2-D">IN Female - Warm (D)</option>
+                        <option value="en-IN-Neural2-A">IN Female - Professional (A)</option>
+                    </optgroup>
                 </select>
+                <small class="text-muted">⭐ = Recommended for Finance & Psychology content</small>
             </div>
 
             <!-- Speed Control -->
