@@ -8,3 +8,20 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+# IDE
+.idea/
+.vscode/
+
+# Dependencies
+node_modules/
+
+# Environment variables (IMPORTANT!)
+.env
+.env.local
+.env*.local
+
+# Mac
+.DS_Store
+
+# Vercel
+.vercel
